@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form with Validation</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Registration Form</h1>
+    <p>Sahil Sharma</p> 
+</header>
+
+<div class="swiper-container">
+   
+    <div class="swiper-wrapper">
+
+       
+        <div class="swiper-slide">
+            <form id="school-form" action="#" method="post">
+                <div class="input-group">
+                    <label for="school-name">Name of School</label>
+                    <input type="text" id="school-name" name="school-name" placeholder="Enter school name">
+                </div>
+                <div class="input-group">
+                    <label for="date-joining">Date of Joining</label>
+                    <input type="date" id="date-joining" name="date-joining" required>
+                </div>
+                <div class="input-group radio-group">
+                    <span>Graduated</span>
+                    <label for="graduated-yes">Yes</label>
+                    <input type="radio" id="graduated-yes" name="graduated" value="yes" required>
+                    <label for="graduated-no">No</label>
+                    <input type="radio" id="graduated-no" name="graduated" value="no" required>
+                </div>
+                <div class="swiper-button-next"></div>
+                <button type="submit">Submit</button>
+                
+                <!-- <button type="button" class="swiper-button-next">Next</button> -->
+            </form>
+        </div>
+
+        <div class="swiper-slide">
+            <form id="personal-form" action="#" method="post">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ener your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required oninvalid="this.setCustomValidity('Please enter a valid phone number (e.g., 123-456-7890)')" oninput="this.setCustomValidity('')" />
+                </div>
+                <div class="input-group">
+                    <label for="zipcode">Zip Code (Canada)</label>
+                    <input type="text" id="zipcode" name="zipcode" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="B0A 1Z1" required oninvalid="this.setCustomValidity('Please enter a valid Canadian ZIP Code (e.g.,B0A 1Z1)')" oninput="this.setCustomValidity('')" />
+                </div>
+                <button type="submit">Submit</button>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- <button type="button" class="swiper-button-prev">Back</button>
+
+                    <button type="button" class="swiper-button-next">Next</button> -->
+            </form>
+        </div>
+
+      
+        <div class="swiper-slide">
+            <form id="payment-form" action="#" method="post" >
+                <div class="input-group">
+                    <label for="card-number">Credit Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="enter card number" >
+                </div>
+                <div class="input-group">
+                    <label for="exp-date">Expiration Date</label>
+                    <input type="date" id="expDate" name="expDate">
+                </div>
+                <div class="input-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="enter cvv">
+                </div>
+              
+                <div class="swiper-button-prev"></div>
+
+                <!-- <button type="button" class="swiper-button-prev" hidden>Back</button> -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    
+    <div class="swiper-pagination"></div>
+</div>
+<footer>programmed by sahil sharma</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
+
