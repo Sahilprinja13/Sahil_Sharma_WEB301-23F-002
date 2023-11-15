@@ -1,0 +1,24 @@
+/* Custom CSS for background colors on different screen sizes */
+@media (max-width: 576px) { 
+    body {
+      background-color:darkblue; /* Example color for small screens */
+    }
+  }
+  @media (min-width: 768px) {
+    body {
+      background-color: black; /* Example color for medium screens */
+    }
+  }
+  @media (min-width: 992px) {
+    body {
+      background-color: brown; /* Example color for large screens */
+    }
+  }
+  h1{
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+  }
